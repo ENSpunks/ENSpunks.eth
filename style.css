@@ -1,0 +1,689 @@
+@font-face {
+  font-family: "Graphik";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Graphik-Regular.eot");
+  src: url("fonts/Graphik-Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Graphik-Regular.woff2") format("woff2"),
+    url("fonts/Graphik-Regular.woff") format("woff"),
+    url("fonts/Graphik-Regular.svg#Graphik-Regular") format("svg");
+  unicode-range: U+0020-00FE;
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/Graphik-Medium.eot");
+  src: url("fonts/Graphik-Medium.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Graphik-Medium.woff2") format("woff2"),
+    url("fonts/Graphik-Medium.woff") format("woff"),
+    url("fonts/Graphik-Medium.svg#Graphik-Medium") format("svg");
+  unicode-range: U+0020-00FE;
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/Graphik-Semibold.eot");
+  src: url("fonts/Graphik-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Graphik-Semibold.woff2") format("woff2"),
+    url("fonts/Graphik-Semibold.woff") format("woff"),
+    url("fonts/Graphik-Semibold.svg#Graphik-Semibold") format("svg");
+  unicode-range: U+0020-00FE;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Graphik", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(164, 47, 255, 0.2);
+  color: #a42fff;
+}
+::-moz-selection {
+  background: rgba(164, 47, 255, 0.2);
+  color: #a42fff;
+}
+
+#content {
+  overflow: hidden;
+  position: relative;
+}
+
+#background-gradient {
+  background-image: linear-gradient(
+    180deg,
+    rgba(60, 66, 82, 0.06) 0%,
+    rgba(60, 66, 82, 0) 100%
+  );
+  height: 940px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  height: 50px;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 24px;
+  position: relative;
+  top: 30px;
+}
+
+.nav-logo {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: url(images/rainbow-logo.png) center no-repeat;
+  background-size: 170px 50px;
+  display: block;
+  float: left;
+  height: 50px;
+  margin-left: -9px;
+  width: 170px;
+}
+
+nav ul {
+  float: right;
+  margin-top: 8px;
+}
+
+nav ul a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: rgba(60, 66, 82, 0.8);
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-left: 19px;
+  position: relative;
+  transition: 0.125s ease;
+  will-change: transform;
+}
+nav ul a:hover {
+  animation: rainbow-links 2s infinite;
+}
+nav ul a:active {
+  transform: scale(0.9);
+}
+
+.nav-twitter {
+  padding-left: 29px;
+}
+.nav-twitter:before {
+  content: "🐦";
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 22px;
+}
+
+.nav-contact {
+  padding-left: 27px;
+}
+.nav-contact:before {
+  content: "📮";
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 15px;
+}
+
+h1 {
+  color: #25292e;
+  font-size: 3.75em;
+  line-height: 1em;
+  margin: 0 auto 30px auto;
+  max-width: 632px;
+  padding: 78px 24px 0 24px;
+  text-align: center;
+}
+
+.button-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: 0.125s ease;
+}
+.button-wrapper.extended {
+  transform: translateX(-84.5px);
+}
+
+#app-store-button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  animation: rainbow-button 2s infinite;
+  background-color: #00f8ff;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 248, 255, 0.4),
+    0 10px 30px rgba(37, 41, 46, 0.2);
+  cursor: pointer;
+  display: block;
+  height: 63px;
+  margin: 0 12px 24px 12px;
+  position: relative;
+  transition: 0.125s ease;
+  width: 177px;
+  z-index: 2;
+}
+#app-store-button:hover {
+  transform: scale(1.075);
+}
+#app-store-button:active {
+  transform: scale(0.92);
+}
+
+#app-store-button div {
+  background: url(app-store-button.svg) #000000 center no-repeat;
+  border-radius: 15.5px;
+  height: 58px;
+  left: 2.5px;
+  position: absolute;
+  top: 2.5px;
+  width: 172px;
+}
+
+#android-button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #ececee;
+  border-radius: 18px;
+  cursor: text;
+  height: 63px;
+  margin: 0 12px 24px 12px;
+  position: relative;
+  transition: 0.125s ease;
+  width: 231px;
+  will-change: transform;
+  z-index: 3;
+}
+#android-button:hover {
+  transform: scale(1.075);
+}
+#android-button:active {
+  transform: scale(0.9);
+}
+#android-button.lock-scale {
+  transform: scale(1) !important;
+}
+#android-button.subscribed {
+  background-color: transparent;
+}
+
+.right-button {
+  background-color: #ececee;
+  border-radius: 18px;
+  display: flex;
+  height: 63px;
+  left: 10px;
+  position: absolute;
+  transition: 0.125s ease;
+  width: 211px;
+  will-change: transform;
+}
+.right-button.extended {
+  transform: translateX(179px);
+}
+
+.js-cm-form.subscribed {
+  display: none;
+}
+
+#field-email {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+  border: none;
+  border-radius: 18px;
+  caret-color: #a42fff;
+  color: rgb(60, 66, 82);
+  font-family: "Graphik", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  height: 63px;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+  outline: none;
+  overflow: visible;
+  padding: 23px 19px 12px 51px;
+  position: absolute;
+  width: 231px;
+}
+#field-email.extended {
+  width: 320px !important;
+}
+#field-email::placeholder {
+  color: rgba(60, 66, 82);
+  font-weight: 500;
+  height: 28px;
+  line-height: inherit;
+  opacity: 0.25;
+}
+
+#android-icon-wrapper {
+  animation: android-dance 1.6s linear infinite;
+  height: 13px;
+  left: 17px;
+  position: absolute;
+  top: 11px;
+  width: 22px;
+}
+
+#android-icon {
+  -webkit-mask: url(images/icon-android.svg) center no-repeat;
+  -webkit-mask-box-image: url(images/icon-android.svg) center no-repeat;
+  animation: android-icon-color 2s infinite;
+  background-color: #a42fff;
+  background-size: 100%;
+  height: 13px;
+  mask-image: url(images/icon-android.svg) center no-repeat;
+  pointer-events: none;
+  position: absolute;
+  transform: rotate(0) scaleY(0.95) translateX(0) translateY(0.5px);
+  width: 22px;
+}
+
+#mail-icon {
+  -webkit-mask: url(images/icon-mail.svg) center no-repeat;
+  -webkit-mask-box-image: url(images/icon-mail.svg) center no-repeat;
+  animation: android-icon-color 2s infinite;
+  background-color: #a42fff;
+  background-size: 100%;
+  height: 20px;
+  left: 15px;
+  mask-image: url(images/icon-mail.svg) center no-repeat;
+  pointer-events: none;
+  position: absolute;
+  top: 28px;
+  width: 26px;
+}
+
+#android-button p {
+  font-size: 0.78125em;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 12px;
+  pointer-events: none;
+  position: absolute;
+  top: 11px;
+}
+
+p.input-label {
+  color: rgba(60, 66, 82, 0.6);
+  left: 52px;
+}
+
+p#enter-label {
+  color: rgba(60, 66, 82, 0.25);
+  display: none;
+  right: 15px;
+  text-align: right;
+  transition: 0.125s ease;
+}
+
+#submit-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  color: #a42fff;
+  cursor: pointer;
+  display: none;
+  font-family: "Graphik", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0;
+  padding: 10px;
+  pointer-events: auto;
+  position: absolute;
+  right: 5px;
+  text-align: right;
+  text-decoration: none;
+  top: 13px;
+  transition: 0.125s ease;
+  will-change: transform;
+}
+#submit-button:focus {
+  outline: 0;
+}
+#submit-button:hover {
+  animation: rainbow-links 2s infinite;
+}
+#submit-button:active {
+  transform: scale(0.92);
+}
+
+#success-message {
+  color: #868b94;
+  display: none;
+  font-size: 1.25em;
+  font-weight: 600;
+  left: 25px;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  transition: 0.125s ease;
+  width: 350px;
+}
+#success-message.subscribed {
+  display: block;
+}
+
+#success-message-mobile {
+  color: #868b94;
+  display: none;
+  font-size: 1.25em;
+  font-weight: 600;
+  left: 34.5px;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  transition: 0.125s ease;
+  width: 231px;
+}
+#success-message-mobile.subscribed {
+  display: none;
+}
+
+.app-preview {
+  -webkit-user-select: none;
+  margin: 0 auto;
+  max-width: 100%;
+  pointer-events: none;
+  width: 420px;
+}
+
+.app-preview div {
+  padding-bottom: 191.4285714286%;
+  position: relative;
+}
+
+.app-preview img {
+  position: absolute;
+  width: 100%;
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 0 24px 72px 24px;
+  position: relative;
+  text-align: center;
+}
+
+h3 {
+  color: #25292e;
+  display: inline-block;
+  font-size: 1.25em;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+footer p {
+  color: rgba(60, 66, 82, 0.4);
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+footer a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: 0.125s ease;
+}
+
+.jobs {
+  display: block;
+  padding: 8px 0 10px 0;
+}
+
+h3 {
+  transition: 0.125s ease;
+  will-change: transform;
+}
+h3:hover {
+  animation: rainbow-links 2s infinite;
+}
+h3:active {
+  transform: scale(0.9);
+}
+
+.divider {
+  background: rgba(102, 106, 115, 0.04);
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  margin: 20px auto 30px auto;
+  width: 100px;
+}
+
+.particle {
+  pointer-events: none;
+  position: absolute;
+  will-change: transform;
+}
+
+@keyframes rainbow-button {
+  0%,
+  100% {
+    background-color: #00f8ff;
+    box-shadow: 0 5px 15px rgba(0, 248, 255, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  20% {
+    background-color: #a4ff00;
+    box-shadow: 0 5px 15px rgba(164, 255, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  40% {
+    background-color: #f7275e;
+    box-shadow: 0 5px 15px rgba(247, 39, 94, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  60% {
+    background-color: #ffd300;
+    box-shadow: 0 5px 15px rgba(255, 211, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  80% {
+    background-color: #ff8a00;
+    box-shadow: 0 5px 15px rgba(255, 138, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+}
+
+@keyframes android-dance {
+  0%,
+  100% {
+    transform: rotate(0) scaleY(0.95) translateX(0) translateY(1px);
+  }
+  25% {
+    transform: rotate(-3deg) scaleY(1.05) translateX(-1px) translateY(-1px);
+  }
+  50% {
+    transform: rotate(0) scaleY(0.95) translateX(0) translateY(1px);
+  }
+  75% {
+    transform: rotate(3deg) scaleY(1.05) translateX(1px) translateY(-1px);
+  }
+}
+
+@keyframes android-icon-color {
+  0%,
+  100% {
+    box-shadow: inset 7px 0 7px 0 rgba(0, 248, 255, 0.8);
+  }
+  20% {
+    box-shadow: inset 7px 0 7px 0 rgba(164, 255, 0, 0.8);
+  }
+  40% {
+    box-shadow: inset 7px 0 7px 0 rgba(247, 39, 94, 0.8);
+  }
+  60% {
+    box-shadow: inset 7px 0 7px 0 rgba(255, 211, 0, 0.8);
+  }
+  80% {
+    box-shadow: inset 7px 0 7px 0 rgba(255, 138, 0, 0.8);
+  }
+}
+
+@keyframes rainbow-links {
+  0%,
+  100% {
+    color: #00f8ff;
+  }
+  20% {
+    color: #a4ff00;
+  }
+  40% {
+    color: #f7275e;
+  }
+  60% {
+    color: #ffd300;
+  }
+  80% {
+    color: #ff8a00;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  h1 {
+    font-size: 3.125em;
+    padding-top: 68px;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .button-wrapper.extended {
+    transform: translateX(0);
+  }
+
+  #android-button {
+    margin-bottom: 39px;
+  }
+  #android-button.extended {
+    transform: translateX(-84.5px) !important;
+  }
+  #android-button.subscribed {
+    margin-bottom: 19px;
+  }
+
+  .right-button.extended {
+    transform: translateX(179px);
+  }
+
+  @keyframes android-icon-color {
+    0%,
+    100% {
+      box-shadow: inset -3px 4px 7px 0 rgba(0, 248, 255, 0.8);
+    }
+    20% {
+      box-shadow: inset -3px 4px 7px 0 rgba(164, 255, 0, 0.8);
+    }
+    40% {
+      box-shadow: inset -3px 4px 7px 0 rgba(247, 39, 94, 0.8);
+    }
+    60% {
+      box-shadow: inset -3px 4px 7px 0 rgba(255, 211, 0, 0.8);
+    }
+    80% {
+      box-shadow: inset -3px 4px 7px 0 rgba(255, 138, 0, 0.8);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    top: 18px;
+  }
+
+  nav ul {
+    margin-top: 7px;
+  }
+
+  .nav-contact {
+    display: none !important;
+  }
+
+  .nav-twitter:before {
+    top: 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    padding-top: 58px;
+  }
+
+  #android-button.extended {
+    transform: translateX(-34.5px) !important;
+  }
+
+  #field-email.extended {
+    width: 230px !important;
+  }
+
+  #success-message.subscribed {
+    display: none;
+  }
+
+  #success-message-mobile.subscribed {
+    display: block;
+  }
+
+  .right-button.extended {
+    transform: translateX(79px);
+  }
+
+  .jobs h3:before {
+    top: 0;
+  }
+
+  .about h3:before {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-twitter {
+    padding-left: 28px;
+  }
+}
